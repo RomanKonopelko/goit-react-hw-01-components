@@ -1,10 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
+import FriendItem from "./Friend-item";
+import friendData from "./friend-list.json";
+import s from "./friend-list.module.css";
 
 const FriendList = () => (
-  <li class="item">
-    <span class="status"></span>
-    <img class="avatar" src="" alt="" width="48" />
-    <p class="name"></p>
-  </li>
+  <div className={s.friends__section}>
+    <h2>Your friends</h2>
+    <ul className={s.friend__list}>
+      <FriendItem friendData={friendData} />
+    </ul>
+  </div>
 );
+
+export default FriendList;

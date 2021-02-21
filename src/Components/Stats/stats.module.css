@@ -1,0 +1,33 @@
+.stats__section {
+  text-align: center;
+}
+
+.stats__title {
+  padding: 20px;
+  background-color: rgba(65, 105, 225, 0.342);
+}
+
+.stats__list {
+  display: flex;
+  padding: 0%;
+  flex-direction: column;
+  justify-content: space-around;
+
+  list-style: none;
+}
+
+.stats__item {
+  padding: 20px 0;
+}
+
+.stats__item:nth-child(3n + 1) {
+  background-color: rgba(248, 69, 69, 0.685);
+}
+
+.stats__item:nth-child(3n) {
+  background-color: rgba(27, 131, 27, 0.699);
+}
+
+.stats__item:nth-child(3n + 2) {
+  background-color: rgba(2, 2, 243, 0.432);
+}
