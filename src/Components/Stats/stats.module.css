@@ -20,6 +20,9 @@
   padding: 20px 0;
 }
 
+.stats__item span {
+  padding: 10px;
+}
 .stats__item:nth-child(3n + 1) {
   background-color: rgba(248, 69, 69, 0.685);
 }
