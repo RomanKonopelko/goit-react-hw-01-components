@@ -4,7 +4,7 @@ import s from "./stats.module.css";
 
 const Stats = ({ title, stats }) => (
   <section className={s.stats__section}>
-    {title ? <h2 className={s.stats__title}>Upload stats</h2> : null}
+    {title && <h2 className={s.stats__title}>Upload stats</h2>}
     <ul className={s.stats__list}>
       {stats.map((el) => (
         <li key={el.id} className={s.stats__item}>
