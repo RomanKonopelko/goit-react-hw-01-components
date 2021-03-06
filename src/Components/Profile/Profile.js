@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import avatar from "./avatar.jpg";
 import s from "./Profile.module.css";
@@ -15,18 +14,18 @@ const Profile = ({ data }) => {
       </div>
 
       <ul className={s.stats}>
-        <li className={s.stats_item}>
-          <span className={s.label}>Followers</span>
-          <span className={s.quantity}>{stats.followers}</span>
-        </li>
-        <li className={s.stats_item}>
-          <span className={s.label}>Views</span>
-          <span className={s.quantity}>{stats.views}</span>
-        </li>
-        <li className={s.stats_item}>
-          <span className={s.label}>Likes</span>
-          <span className={s.quantity}>{stats.likes}</span>
-        </li>
+        {stats &&
+          stats.map((stat, index) => {
+            console.log(stat);
+            const newStat = Object.entries(stat);
+            console.log(newStat);
+            return (
+              <li className={s.stats_item} key={index}>
+                <span className={s.label}>{newStat[0][0]}</span>
+                <span className={s.quantity}>{newStat[0][1] ? newStat[0][1] : 0}</span>
+              </li>
+            );
+          })}
       </ul>
     </div>
   );
